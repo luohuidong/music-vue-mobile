@@ -12,3 +12,4 @@
 - axios
 - [mand-mobile](https://didi.github.io/mand-mobile/#/en-US/home)：滴滴出品 Vue 移动端 UI
 - Scss, Stylus
+- [vue-lazyload](https://github.com/hilongjw/vue-lazyload)：图片懒加载
