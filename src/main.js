@@ -1,12 +1,16 @@
 import Vue from 'vue';
 import App from './App.vue';
+import VueLazyload from 'vue-lazyload';
 
 import store from './store/';
 import router from './router';
+import '@assets/stylus/index.styl';
 
 Vue.config.productionTip = false;
 
-import '@assets/stylus/index.styl';
+Vue.use(VueLazyload, {
+  loading: require('@assets/image/default.png'),
+});
 
 new Vue({
   render: h => h(App),

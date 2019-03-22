@@ -5,9 +5,9 @@
       :scrolling-x="false"
       >
       <Banner />
-        <div class="recommend-list">
-          <DiscList/>
-        </div>
+      <div class="recommend-list">
+        <DiscList/>
+      </div>
     </ScrollView>
   </div>
 </template>

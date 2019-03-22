@@ -1,7 +1,7 @@
 <template>
   <div>
     <md-swiper ref="swiper" :is-prevent="false" :useNative-driver="false">
-      <md-swiper-item :key="item.encodeId" v-for="item in banner">
+      <md-swiper-item :key="item.imageUrl" v-for="item in banner">
         <img :src="item.imageUrl" alt>
       </md-swiper-item>
     </md-swiper>
