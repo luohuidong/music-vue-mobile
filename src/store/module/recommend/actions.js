@@ -21,12 +21,18 @@ async function handleGetRecommendPlayList({ commit }) {
   }
 }
 
-function handleGetBanner({ commit }) {
-  getBanner().then(result => {
+async function handleGetBanner({ commit }) {
+  try {
+    const result = await getBanner();
+    
     commit(BANNER_REQUEST, {
       data: result
     });
-  });
+  } catch (error) {
+    commit(BANNER_REQUEST, {
+      data: []
+    });
+  }
 }
 
 export default {
