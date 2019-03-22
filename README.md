@@ -10,5 +10,5 @@
 
 - Vue 全家桶：Vue, Vuex, Vue Router
 - axios
-- mand-mobile：滴滴出品
+- [mand-mobile](https://didi.github.io/mand-mobile/#/en-US/home)：滴滴出品 Vue 移动端 UI
 - Scss, Stylus
