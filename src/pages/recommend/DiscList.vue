@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>热门歌单推荐</h1>
+    <Loading v-if="isLoading" />
     <ul>
       <li v-for="item in recommendedPlayList" :key="item.id" class="item">
         <div class="icon">
@@ -17,14 +18,24 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import Loading from '@components/Loading/';
 
 export default {
+  components: {
+    Loading,
+  },
   data() {
     return {
-      discList: []
     };
   },
   computed: {
+    isLoading() {
+      let loading = false;
+      if (this.recommendedPlayList.length === 0) {
+        loading = true;
+      }
+      return loading;
+    },
     ...mapState({
       recommendedPlayList: state => state.recommend.recommendedPlayList
     })
