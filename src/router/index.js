@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import Recommend from '@pages/recommend/';
-import Singer from '@pages/singer/';
+import singerRouter from './singer';
 import Rank from '@pages/rank';
 import Search from '@pages/search/';
 
@@ -17,10 +17,7 @@ const routes = [
     path: '/recommend',
     component: Recommend
   },
-  {
-    path: '/singer',
-    component: Singer
-  },
+  ...singerRouter,
   {
     path: '/rank',
     component: Rank
