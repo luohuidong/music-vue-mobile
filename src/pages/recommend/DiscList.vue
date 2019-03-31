@@ -36,17 +36,17 @@ export default {
       }
       return loading;
     },
-    ...mapState({
-      recommendedPlayList: state => state.recommend.recommendedPlayList
+    ...mapState('recommend', {
+      recommendedPlayList: state => state.recommendedPlayList
     })
   },
   created() {
     this.handleGetRecommendPlayList();
   },
   methods: {
-    ...mapActions({
-      handleGetRecommendPlayList: 'recommend/handleGetRecommendPlayList'
-    })
+    ...mapActions('recommend', [
+      'handleGetRecommendPlayList'
+    ])
   }
 };
 </script>

@@ -22,17 +22,17 @@ export default {
     };
   },
   computed: {
-    ...mapState({
-      banner: state => state.recommend.banner
+    ...mapState('recommend', {
+      banner: state => state.banner
     })
   },
   created() {
     this.handleGetBanner();
   },
   methods: {
-    ...mapActions({
-      handleGetBanner: 'recommend/handleGetBanner'
-    })
+    ...mapActions('recommend', [
+      'handleGetBanner'
+    ])
   }
 };
 </script>
