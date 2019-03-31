@@ -1,12 +1,10 @@
 <template>
-  <div 
-    class="list-shortcut" 
-  >
+  <div class="list-shortcut">
     <ul>
       <li
-        v-for="(item, index) in shortcutList" 
+        v-for="(item, index) in singer.shortcutListData" 
         :data-index="index"
-        :class="{ item: true, current: currentValue === item.value }"
+        :class="{ item: true, current: singer.currentShortcut.value === item.value }"
         :key="item.key"
         @click="handleClick(item)"
       >{{ item.text }}</li>
@@ -15,42 +13,26 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 export default {
   data() {
     return {
-      currentValue: 'hot'
     };
   },
   computed: {
-    shortcutList() {
-      let shortcuts = [
-        {
-          key: 'hot',
-          text: '热',
-          value: 'hot'
-        }
-      ];
-
-      for (let i = 97; i <= 122; i++) {
-        const character = String.fromCharCode(i);
-        shortcuts.push({
-          key: i,
-          text: character.toUpperCase(),
-          value: character
-        });
-      }
-      return shortcuts;
-    }
+    ...mapState({
+      singer: state => state.singerList
+    })    
   },
   methods: {
-    ...mapActions({
-      handleGetSingerList: 'singer/handleGetSingerList',
-      handleTopSingerList: 'singer/handleTopSingerList'
-    }),
+    ...mapActions('singerList', [
+      'handleGetSingerList',
+      'handleTopSingerList',
+      'setCurrentShortcut',
+    ]),
     handleClick(item) {
-      this.currentValue = item.value;
+      this.setCurrentShortcut(item);
       if (item.value === 'hot') {
         this.handleTopSingerList();
       } else {

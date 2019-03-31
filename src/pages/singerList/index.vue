@@ -1,30 +1,36 @@
 <template>
-  <div class="singer">
-    <div class="listVeiw">
-      <h2 class="list-group-title">热门歌手</h2>
-      <ListView :data="singerData"/>
+  <Layout>
+    <div class="singer">
+      <h2 class="list-group-title">{{ currentShortcut.description }}</h2>
+      <div class="listVeiw">
+        <ListView :data="singerData" @select="selectSinger"/>
+      </div>
       <GoTo/>
     </div>
-  </div>
+  </Layout>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex';
-import ListView from './ListView.vue';
+
+import Layout from '@components/Layout';
+import ListView from '@components/ListView/';
 import GoTo from './GoTo.vue';
 
 export default {
   components: {
     ListView,
     GoTo,
+    Layout
   },
   computed: {
-    ...mapState({
-      singerList: state => state.singer.singerList
+    ...mapState('singerList', {
+      singerList: state => state.singerList,
+      currentShortcut: state => state.currentShortcut
     }),
     singerData() {
       return this.singerList.map(({ id, name, img1v1Url }) => ({
-        key: id,
+        id,
         name,
         picture: img1v1Url
       }));
@@ -34,9 +40,12 @@ export default {
     this.handleGetSingerList();
   },
   methods: {
-    ...mapActions({
-      handleGetSingerList: 'singer/handleGetSingerList'
-    })
+    ...mapActions('singerList', ['handleGetSingerList']),
+    selectSinger(singer) {
+      this.$router.push({
+        path: `/singer/detail/${singer.id}`
+      });
+    }
   }
 };
 </script>
@@ -52,10 +61,10 @@ export default {
 }
 
 .listVeiw {
-  position: relative;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  position: fixed;
+  top: 118px;
+  bottom: 0;
   background: $color-background;
 }
 
