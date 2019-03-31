@@ -1,6 +1,7 @@
 import { 
   SINGER_LIST_REQUEST,
-  SINGER_LIST_FAILURE
+  SINGER_LIST_FAILURE,
+  SINGER_SET_CURRENT_SHORTCUR,
 } from './mutationTypes';
 
 import { getSingerList, getTopSingerList } from '@api/singer';
@@ -34,7 +35,14 @@ async function handleTopSingerList({ commit }, params) {
   }
 }
 
+function setCurrentShortcut({ commit }, currentShortcut) {
+  commit(SINGER_SET_CURRENT_SHORTCUR, {
+    data: currentShortcut
+  });  
+}
+
 export default {
   handleGetSingerList,
-  handleTopSingerList
+  handleTopSingerList,
+  setCurrentShortcut
 };
