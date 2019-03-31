@@ -1,8 +1,12 @@
 <template>
   <ScrollView :auto-reflow="true" :scrolling-x="false">
-
     <ul>
-      <li v-for="item in data" class="list-group-item" :key="item.key">
+      <li 
+        v-for="item in data" 
+        class="list-group-item" 
+        :key="item.id"
+        @click="selectItem(item)"
+        >
         <img class="avatar" v-lazy="item.picture" alt="item.name">
         <span class="name">{{ item.name }}</span>
       </li>
@@ -12,6 +16,7 @@
 
 <script>
 import { ScrollView } from 'mand-mobile';
+
 export default {
   components: {
     ScrollView
@@ -20,6 +25,11 @@ export default {
     data: {
       type: Array,
       default: () => []
+    }
+  },
+  methods: {
+    selectItem(item) {
+      this.$emit('select', item);
     }
   }
 };
