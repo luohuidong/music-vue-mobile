@@ -1,10 +1,18 @@
 // 排行榜页面
 <template>
-  <div>排行榜页面</div>
+  <Layout>
+    <div>排行榜页面</div>
+  </Layout>
 </template>
 
 <script>
-export default {};
+import Layout from '@components/Layout';
+
+export default {
+  components: {
+    Layout
+  }
+};
 </script>
 
 <style lang="stylus" scoped>
