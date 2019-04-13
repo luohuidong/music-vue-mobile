@@ -3,14 +3,17 @@
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
+    <Player />
   </div>
 </template>
 
 <script>
+import Player from '@components/player/index.vue';
 
 export default {
   name: 'app',
   components: {
+    Player
   }
 };
 </script>
