@@ -1,5 +1,5 @@
 function currentSong(state) {
-  return state.paylist[state.currentIndex];
+  return state.playListDatas.find(element => element.id ===state.currentSongId) || {};
 }
 
 export default {

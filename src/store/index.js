@@ -6,6 +6,7 @@ import createLogger from 'vuex/dist/logger';
 import recommend from './module/recommend';
 import singerList from './module/singerList';
 import singerDetail from './module/singerDetail';
+import player from './module/player';
 
 Vue.use(Vuex);
 
@@ -17,7 +18,8 @@ const store = new Vuex.Store({
   modules: {
     recommend,
     singerList,
-    singerDetail
+    singerDetail,
+    player
   }
 });
 
