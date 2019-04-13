@@ -12,7 +12,8 @@ module.exports = {
         '@assets': resolve('src/assets/'),
         '@api': resolve('src/api/'),
         '@base': resolve('src/base/'),
-        '@pages': resolve('src/pages/')
+        '@pages': resolve('src/pages/'),
+        '@utils': resolve('src/utils/')
       }
     }
   },
