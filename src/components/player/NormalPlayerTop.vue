@@ -15,7 +15,9 @@ import { mapGetters, mapActions } from 'vuex';
 
 export default {
   computed: {
-    ...mapGetters('player', ['currentSong'])
+    ...mapGetters('player', [
+      'currentSong',
+    ])
   },
   methods: {
     ...mapActions('player', ['setFullScreen']),

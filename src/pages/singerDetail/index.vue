@@ -5,18 +5,18 @@
 </template>
 
 <script>
-import { mapState, mapActions, mapGetters } from "vuex";
-import MusicList from "@components/MusicList";
+import { mapState, mapActions, mapGetters } from 'vuex';
+import MusicList from '@components/MusicList';
 
 export default {
   components: {
     MusicList
   },
   computed: {
-    ...mapState("singerDetail", {
+    ...mapState('singerDetail', {
       singer: state => state.singer
     }),
-    ...mapGetters("singerDetail", ["songs"])
+    ...mapGetters('singerDetail', ['songs'])
   },
   created() {
     const { singerId } = this.$route.params;
@@ -29,7 +29,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions("singerDetail", ["handleGetSingerHotSong"])
+    ...mapActions('singerDetail', ['handleGetSingerHotSong'])
   }
 };
 </script>

@@ -1,7 +1,12 @@
 <template>
   <div class="song-list">
     <ul>
-      <li class="item" v-for="song in songs" :key="song.id">
+      <li 
+        class="item" 
+          v-for="(song) in songs" 
+          :key="song.id"
+          @click="selectItem(song)"
+        >
         <div class="content">
           <h2 class="name">{{ song.name }}</h2>
           <p class="desc">{{ song.singer }} / {{ song.album.name }}</p>
@@ -19,6 +24,11 @@ export default {
       default: () => []
     }
   },
+  methods: {
+    selectItem(item) {
+      this.$emit('select', item);
+    }
+  }
 };
 </script>
 

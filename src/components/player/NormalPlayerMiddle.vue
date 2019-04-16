@@ -3,7 +3,7 @@
     <div class="middle-l">
       <div class="cd-wrapper">
         <div class="cd">
-          <img alt class="img" :src="currentSong.img">
+          <img alt class="image" :src="currentSong.img">
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import VueLazyload from 'vue-lazyload';
 
 import store from './store/';
 import router from './router';
-import '@assets/stylus/index.styl';
+import '@assets/styles/index.scss';
 
 Vue.config.productionTip = false;
 
