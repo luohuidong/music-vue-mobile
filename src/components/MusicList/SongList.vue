@@ -3,7 +3,7 @@
     <ul>
       <li 
         class="item" 
-          v-for="(song) in songs" 
+          v-for="song in songs" 
           :key="song.id"
           @click="selectItem(song)"
         >
@@ -62,15 +62,15 @@ export default {
         background-size: 25px 24px;
 
         &.icon0 {
-          bg-image('first');
+          bg-image('./images/first');
         }
 
         &.icon1 {
-          bg-image('second');
+          bg-image('./images/second');
         }
 
         &.icon2 {
-          bg-image('third');
+          bg-image('./images/third');
         }
       }
 

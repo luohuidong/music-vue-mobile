@@ -1,3 +1,4 @@
+// 音乐列表
 <template>
   <div class="music-list">
     <Picture 
@@ -17,7 +18,7 @@
 import { mapActions } from 'vuex';
 import ScrollView from '@components/ScrollView/';
 import Picture from './Picture';
-import SongList from './SongList/';
+import SongList from './SongList';
 
 export default {
   components: {
@@ -26,22 +27,22 @@ export default {
     ScrollView
   },
   props: {
-    picture: {
+    picture: { // 歌手图片
       type: String,
       default: ''
     },
-    songs: {
+    songs: { // 歌手歌曲
       type: Array,
       defualt: () => []
     },
-    title: {
+    title: { // 歌手名称
       type: String,
       defualt: ''
     }
   },
   computed: {
-    songIds() {
-      let songIds = this.songs.map(element => element.id)
+    songIds() { // 歌手歌曲 ids
+      let songIds = this.songs.map(element => element.id);
       return songIds.join(',');
     }
   },
@@ -56,7 +57,6 @@ export default {
       };
       this.setPlayList(data);
     },
-    
   }
 };
 </script>
