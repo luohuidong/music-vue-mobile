@@ -6,7 +6,19 @@
 
 接口使用： [网易云音乐 Node.js 接口](https://github.com/Binaryify/NeteaseCloudMusicApi)
 
-项目依赖：
+## 模块
+
+- [x] 推荐页面
+- [x] 歌手页面
+- [x] 歌手详情页
+- [ ] 播放器
+- [ ] 歌单页面
+- [ ] 排行榜页面
+- [ ] 搜索页面
+- [ ] 歌曲列表
+- [ ] 用户中心
+
+## 项目依赖
 
 - Vue 全家桶：Vue, Vuex, Vue Router
 - axios
