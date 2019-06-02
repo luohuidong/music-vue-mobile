@@ -1,3 +1,4 @@
+// 全屏播放器中部
 <template>
   <div class="middle">
     <div class="middle-l">

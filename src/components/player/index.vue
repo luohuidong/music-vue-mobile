@@ -1,3 +1,4 @@
+// 播放器
 <template>
   <div class="player" v-show="playListDatas.length>0">
     <NormalPlayer />
@@ -19,7 +20,7 @@ export default {
     ...mapState('player', [
       'currentSongId',
       'playListIds',
-      'sequenceList',
+      'sequenceListIds',
       'playListDatas',
       'fullScreen',
       'mode',

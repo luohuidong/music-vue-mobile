@@ -1,3 +1,4 @@
+// 全屏播放器头部
 <template>
   <transition name="normal">
     <div class="top">

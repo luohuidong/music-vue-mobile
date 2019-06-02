@@ -1,3 +1,4 @@
+// 全屏播放器背景图片
 <template>
   <div class="background">
     <img width="100%" height="100%" :src="currentSong.img">

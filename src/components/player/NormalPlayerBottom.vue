@@ -1,3 +1,4 @@
+// 全屏播放器底部
 <template>
   <div class="bottom">
     <div class="operators">

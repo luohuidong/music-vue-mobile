@@ -1,35 +1,34 @@
+// 全屏播放器
 <template>
-  <div class="normal-player" v-show="fullScreen">
-    <transition name="normal">
-      <div>
-        <NormalPlayerBackground />
-        <NormalPlayerTop />
-        <NormalPlayerMiddle />
-        <NormalPlayerBottom />
-      </div>
-    </transition>
-  </div>
+  <transition name="normal">
+    <div class="normal-player" v-if="fullScreen">
+      <NormalPlayerBackground/>
+      <NormalPlayerTop/>
+      <NormalPlayerMiddle/>
+      <NormalPlayerBottom/>
+    </div>
+  </transition>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState } from "vuex";
 
-import NormalPlayerBackground from './NormalPlayerBackground.vue';
-import NormalPlayerTop from './NormalPlayerTop.vue';
-import NormalPlayerMiddle from './NormalPlayerMiddle.vue';
-import NormalPlayerBottom from './NormalPlayerBottom.vue';
+import NormalPlayerBackground from "./NormalPlayerBackground.vue";
+import NormalPlayerTop from "./NormalPlayerTop.vue";
+import NormalPlayerMiddle from "./NormalPlayerMiddle.vue";
+import NormalPlayerBottom from "./NormalPlayerBottom.vue";
 
 export default {
   components: {
     NormalPlayerBackground,
     NormalPlayerTop,
     NormalPlayerMiddle,
-    NormalPlayerBottom,
+    NormalPlayerBottom
   },
   computed: {
-    ...mapState('player', [
-      'fullScreen'
-    ])
+    ...mapState("player", ["fullScreen"])
+  },
+  methods: {
   }
 };
 </script>
@@ -46,8 +45,7 @@ export default {
   bottom: 0;
   z-index: 150;
   background: $color-background;
-  
-  
+
   &.normal-enter-active, &.normal-leave-active {
     transition: all 0.4s;
 
