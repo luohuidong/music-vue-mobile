@@ -7,7 +7,7 @@ async function setPlayList({ commit }, payload) {
   commit(types.SET_PLAY_LIST, {
     currentSongId: payload.currentSongId,
     playListIds: payload.playListIds,
-    sequenceList: payload.playListIds,
+    sequenceListIds: payload.playListIds,
     playListDatas: songDetails,
     fullScreen: true,
     playing: true,

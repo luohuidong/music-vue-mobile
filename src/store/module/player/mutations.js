@@ -7,7 +7,7 @@ export default {
     state.playListDatas = payload.playListDatas;
     state.playListIds = payload.playListIds;
     state.playing = payload.playing;
-    state.sequenceList = payload.sequenceList;
+    state.sequenceListIds = payload.sequenceListIds;
   },
   [types.SET_FULL_SCREEN](state, payload) {
     state.fullScreen = payload.fullScreen;
