@@ -11,7 +11,7 @@ module.exports = {
     'indent': ['error', 2, {
       'SwitchCase': 1
     }],
-    'quotes': ['error', 'single'],
+    'quotes': ['error', 'double'],
     'semi': ['error', 'always'],
     'require-await': 'error',
   },
