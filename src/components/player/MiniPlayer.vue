@@ -2,18 +2,18 @@
 <template>
   <transition name="mini">
     <div class="mini-player" v-if="!fullScreen" @click="setFullScreen(true)">
-      <MiniPlayerImage />
-      <MiniPlayerText />
-      <MiniPlayerControl />
+      <MiniPlayerImage/>
+      <MiniPlayerText/>
+      <MiniPlayerControl/>
     </div>
   </transition>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
-import MiniPlayerImage from './MiniPlayerImage';
-import MiniPlayerText from './MiniPlayerText';
-import MiniPlayerControl from './MiniPlayerControl';
+import { mapState, mapActions } from "vuex";
+import MiniPlayerImage from "./MiniPlayerImage";
+import MiniPlayerText from "./MiniPlayerText";
+import MiniPlayerControl from "./MiniPlayerControl";
 
 export default {
   components: {
@@ -22,17 +22,13 @@ export default {
     MiniPlayerControl
   },
   computed: {
-    ...mapState('player', [
-      'fullScreen',
-    ]),
+    ...mapState("player", ["fullScreen"])
   },
   methods: {
-    ...mapActions('player', [
-      'setFullScreen'
-    ]),
+    ...mapActions("player", ["setFullScreen"]),
     openNormalPlayer() {
       this.setFullScreen(true);
-    },
+    }
   }
 };
 </script>
@@ -59,7 +55,5 @@ export default {
   &.mini-enter, &.mini-leave-to {
     opacity: 0;
   }
-
- 
 }
 </style>

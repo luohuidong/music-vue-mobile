@@ -1,15 +1,16 @@
 // 播放器
 <template>
   <div class="player" v-show="playListDatas.length>0">
-    <NormalPlayer />
-    <MiniPlayer />
+    <NormalPlayer/>
+    <MiniPlayer/>
+    <audio></audio>
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
-import NormalPlayer from './NormalPlayer.vue';
-import MiniPlayer from './MiniPlayer.vue';
+import { mapState, mapGetters } from "vuex";
+import NormalPlayer from "./NormalPlayer.vue";
+import MiniPlayer from "./MiniPlayer.vue";
 
 export default {
   components: {
@@ -17,20 +18,17 @@ export default {
     MiniPlayer
   },
   computed: {
-    ...mapState('player', [
-      'currentSongId',
-      'playListIds',
-      'sequenceListIds',
-      'playListDatas',
-      'fullScreen',
-      'mode',
-      'playing'
+    ...mapState("player", [
+      "currentSongId",
+      "playListIds",
+      "sequenceListIds",
+      "playListDatas",
+      "fullScreen",
+      "mode",
+      "playing"
     ]),
-    ...mapGetters('player', ['currentSong'])
+    ...mapGetters("player", ["currentSong"])
   },
-  created() {
-    console.log('this.currentSong', this.currentSong);
-  }
 };
 </script>
 
