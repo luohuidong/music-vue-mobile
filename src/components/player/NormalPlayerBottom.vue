@@ -11,22 +11,41 @@
       </div>
 
       <div class="icon i-center">
-        <i class="icon-play"></i>
+        <i :class="playIconClass" @click="togglePlay"></i>
       </div>
 
       <div class="icon i-right">
-        <i class="icon-prev"></i>
+        <i class="icon-next"></i>
       </div>
 
       <div class="icon i-right">
-        <i class="icon-sequence"></i>
+        <i class="icon-playlist"></i>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { mapState, mapActions } from "vuex";
+
+export default {
+  computed: {
+    ...mapState("player", [
+      "playingState"
+    ]),
+    playIconClass() {
+      return this.playingState ? "icon-pause" : "icon-play";
+    },
+  },
+  methods: {
+    ...mapActions("player", [
+      "setPlayingState"
+    ]),
+    togglePlay() {
+      this.setPlayingState(!this.playingState);
+    }
+  }
+};
 </script>
 
 <style scoped lang="stylus">

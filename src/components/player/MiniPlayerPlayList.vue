@@ -17,18 +17,9 @@ export default {};
   width: 30px;
   padding: 0 10px;
 
-  .icon-play-mini,
-  .icon-pause-mini,
   .icon-playlist {
     font-size: 30px;
     color: $color-theme-d;
-  }
-
-  .icon-mini {
-    font-size: 32px;
-    position: absolute;
-    left: 0;
-    top: 0;
   }
 }
 </style>

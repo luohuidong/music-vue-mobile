@@ -3,7 +3,7 @@
   <div class="player" v-show="playListDatas.length>0">
     <NormalPlayer/>
     <MiniPlayer/>
-    <audio></audio>
+    <audio :src="currentSong.url" ref="audio"></audio>
   </div>
 </template>
 
@@ -25,10 +25,23 @@ export default {
       "playListDatas",
       "fullScreen",
       "mode",
-      "playing"
+      "playingState"
     ]),
     ...mapGetters("player", ["currentSong"])
   },
+  watch: {
+    currentSong() {
+      this.$nextTick(() => {
+        this.$refs.audio.play();
+      });
+    },
+    playingState(newValue) {
+      const audio = this.$refs.audio;
+      this.$nextTick(() => {
+        newValue ? audio.play() : audio.pause();
+      });
+    }
+  }
 };
 </script>
 

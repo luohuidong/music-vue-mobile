@@ -2,7 +2,7 @@ import { playMode } from "@utils/config";
 
 export default {
   singer: {},
-  playing: false, // 是否播放
+  playingState: false, // 是否播放
   fullScreen: false, // 是否全屏
   playListIds: [], // 列表歌曲 ids
   playListDatas: [], // 当前播放列表的歌曲数据
