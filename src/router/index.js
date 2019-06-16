@@ -1,34 +1,34 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-import Recommend from '@pages/recommend/';
-import singerRouter from './singer';
-import Rank from '@pages/rank';
-import Search from '@pages/search/';
+import Recommend from "@pages/recommend/";
+import singerRouter from "./singer";
+import Rank from "@pages/rank";
+import Search from "@pages/search/";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    redirect: '/recommend'
+    path: "/",
+    redirect: "/recommend"
   },
   {
-    path: '/recommend',
+    path: "/recommend",
     component: Recommend
   },
   ...singerRouter,
   {
-    path: '/rank',
+    path: "/rank",
     component: Rank
   },
   {
-    path: '/search',
+    path: "/search",
     component: Search
   }
 ];
 
 export default new VueRouter({
-  mode: 'history',
+  mode: "history",
   routes
 });

@@ -15,12 +15,12 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import { ScrollView } from 'mand-mobile';
+import { mapState } from "vuex";
+import { ScrollView } from "mand-mobile";
 
-import Layout from '@components/Layout';
-import Banner from './Banner.vue';
-import DiscList from './DiscList.vue';
+import Layout from "@components/Layout";
+import Banner from "./Banner.vue";
+import DiscList from "./DiscList.vue";
 
 export default {
   components: {
@@ -30,7 +30,7 @@ export default {
     Layout
   },
   computed: {
-    ...mapState('recommend', {
+    ...mapState("recommend", {
       recommendedPlayList: state => state.recommendedPlayList
     })
   }

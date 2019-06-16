@@ -1,13 +1,13 @@
-import Singer from '@pages/singerList/';
-import SingerDetail from '@pages/singerDetail/';
+import Singer from "@pages/singerList/";
+import SingerDetail from "@pages/singerDetail/";
 
 export default [
   {
-    path: '/singer/list',
+    path: "/singer/list",
     component: Singer,
   },
   {
-    path: '/singer/detail/:singerId',
+    path: "/singer/detail/:singerId",
     component: SingerDetail
   }
 ];

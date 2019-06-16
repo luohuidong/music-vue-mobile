@@ -29,11 +29,11 @@ export default {
   props: {
     picture: {
       type: String,
-      default: ''
+      default: ""
     },
     title: {
       type: String,
-      defualt: ''
+      defualt: ""
     },
     songs: {
       type: Array,

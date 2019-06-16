@@ -1,5 +1,5 @@
-import { getSingerHotSong } from '@api/singer';
-import types from './mutationTypes';
+import { getSingerHotSong } from "@api/singer";
+import types from "./mutationTypes";
 
 async function handleGetSingerHotSong(context, singerId) {
   const { commit } = context;

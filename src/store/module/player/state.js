@@ -1,4 +1,4 @@
-import { playMode } from '@utils/config';
+import { playMode } from "@utils/config";
 
 export default {
   singer: {},

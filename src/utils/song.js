@@ -14,7 +14,7 @@ export default class Song {
   }
 
   getSinger(singer) {
-    return singer.map(element => element.name).join('/');
+    return singer.map(element => element.name).join("/");
   }
 }
 

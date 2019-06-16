@@ -2,9 +2,9 @@ import {
   SINGER_LIST_REQUEST,
   SINGER_LIST_FAILURE,
   SINGER_SET_CURRENT_SHORTCUR,
-} from './mutationTypes';
+} from "./mutationTypes";
 
-import { getSingerList, getTopSingerList } from '@api/singer';
+import { getSingerList, getTopSingerList } from "@api/singer";
 
 async function handleGetSingerList({ commit }, params) {
   commit(SINGER_LIST_REQUEST, {

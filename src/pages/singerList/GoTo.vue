@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions } from "vuex";
 
 export default {
   data() {
@@ -26,14 +26,14 @@ export default {
     })    
   },
   methods: {
-    ...mapActions('singerList', [
-      'handleGetSingerList',
-      'handleTopSingerList',
-      'setCurrentShortcut',
+    ...mapActions("singerList", [
+      "handleGetSingerList",
+      "handleTopSingerList",
+      "setCurrentShortcut",
     ]),
     handleClick(item) {
       this.setCurrentShortcut(item);
-      if (item.value === 'hot') {
+      if (item.value === "hot") {
         this.handleTopSingerList();
       } else {
         this.handleGetSingerList({

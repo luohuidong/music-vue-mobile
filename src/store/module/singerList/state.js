@@ -1,10 +1,10 @@
 function shortcutList() {
   let shortcuts = [
     {
-      key: 'hot',
-      text: '热',
-      description: '热门歌手',
-      value: 'hot'
+      key: "hot",
+      text: "热",
+      description: "热门歌手",
+      value: "hot"
     }
   ];
 

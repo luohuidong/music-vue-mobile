@@ -1,16 +1,16 @@
-import { get } from './request';
-import { SongDetail } from '@utils/song';
+import { get } from "./request";
+import { SongDetail } from "@utils/song";
 
 /**
  * 获取音乐详情
  * @param {string} songIds 歌曲 ids
  */
 export async function getSongsDetail(songIds) {
-  const getSongsDetail = get('/song/detail', {
+  const getSongsDetail = get("/song/detail", {
     ids: songIds
   });
 
-  const getSongsUrl = get('/song/url', {
+  const getSongsUrl = get("/song/url", {
     id: songIds
   });
   

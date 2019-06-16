@@ -1,4 +1,4 @@
-import Song from '@utils/song';
+import Song from "@utils/song";
 
 function songs (state) {
   return state.hotSongs.map(element => new Song(element));

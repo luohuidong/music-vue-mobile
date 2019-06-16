@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions } from "vuex";
 
-import Layout from '@components/Layout';
-import ListView from '@components/ListView/';
-import GoTo from './GoTo.vue';
+import Layout from "@components/Layout";
+import ListView from "@components/ListView/";
+import GoTo from "./GoTo.vue";
 
 export default {
   components: {
@@ -24,7 +24,7 @@ export default {
     Layout
   },
   computed: {
-    ...mapState('singerList', {
+    ...mapState("singerList", {
       singerList: state => state.singerList,
       currentShortcut: state => state.currentShortcut
     }),
@@ -40,7 +40,7 @@ export default {
     this.handleGetSingerList();
   },
   methods: {
-    ...mapActions('singerList', ['handleGetSingerList']),
+    ...mapActions("singerList", ["handleGetSingerList"]),
     selectSinger(singer) {
       this.$router.push({
         path: `/singer/detail/${singer.id}`

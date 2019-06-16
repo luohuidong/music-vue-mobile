@@ -1,5 +1,5 @@
-import * as types from './mutationTypes';
-import { getSongsDetail } from '@api/song';
+import * as types from "./mutationTypes";
+import { getSongsDetail } from "@api/song";
 
 async function setPlayList({ commit }, payload) {
   const songDetails = await getSongsDetail(payload.playListIds);

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { ScrollView } from 'mand-mobile';
+import { ScrollView } from "mand-mobile";
 
 export default {
   components: {

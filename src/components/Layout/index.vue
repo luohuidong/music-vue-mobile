@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import Header from './Header';
-import Tab from './Tab';
+import Header from "./Header";
+import Tab from "./Tab";
 
 export default {
   components: {

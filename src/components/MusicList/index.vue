@@ -15,10 +15,10 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
-import ScrollView from '@components/ScrollView/';
-import Picture from './Picture';
-import SongList from './SongList';
+import { mapActions } from "vuex";
+import ScrollView from "@components/ScrollView/";
+import Picture from "./Picture";
+import SongList from "./SongList";
 
 export default {
   components: {
@@ -29,7 +29,7 @@ export default {
   props: {
     picture: { // 歌手图片
       type: String,
-      default: ''
+      default: ""
     },
     songs: { // 歌手歌曲
       type: Array,
@@ -37,18 +37,18 @@ export default {
     },
     title: { // 歌手名称
       type: String,
-      defualt: ''
+      defualt: ""
     }
   },
   computed: {
     songIds() { // 歌手歌曲 ids
       let songIds = this.songs.map(element => element.id);
-      return songIds.join(',');
+      return songIds.join(",");
     }
   },
   methods: {
-    ...mapActions('player', [
-      'setPlayList',
+    ...mapActions("player", [
+      "setPlayList",
     ]),
     selectItem(item) {
       const data = {

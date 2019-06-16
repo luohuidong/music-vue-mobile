@@ -1,21 +1,21 @@
 module.exports = {
-  'root': true,
-  'env': {
-    'node': true
+  "root": true,
+  "env": {
+    "node": true
   },
-  'extends': [
-    'plugin:vue/essential',
-    'eslint:recommended',
+  "extends": [
+    "plugin:vue/essential",
+    "eslint:recommended",
   ],
-  'rules': {
-    'indent': ['error', 2, {
-      'SwitchCase': 1
+  "rules": {
+    "indent": ["error", 2, {
+      "SwitchCase": 1
     }],
-    'quotes': ['error', 'double'],
-    'semi': ['error', 'always'],
-    'require-await': 'error',
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
+    "require-await": "error",
   },
-  'parserOptions': {
-    'parser': 'babel-eslint'
+  "parserOptions": {
+    "parser": "babel-eslint"
   }
 };

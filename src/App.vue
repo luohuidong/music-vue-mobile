@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import Player from '@components/player/index.vue';
+import Player from "@components/player/index.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     Player
   }

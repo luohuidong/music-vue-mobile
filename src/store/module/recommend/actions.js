@@ -1,7 +1,7 @@
-import { PLAY_LIST_REQUEST, BANNER_REQUEST } from './mutationTypes';
+import { PLAY_LIST_REQUEST, BANNER_REQUEST } from "./mutationTypes";
 
-import { getBanner } from '@api/banner';
-import { getRecommendedPalyList } from '@api/playlist';
+import { getBanner } from "@api/banner";
+import { getRecommendedPalyList } from "@api/playlist";
 
 /**
  * 获取热门歌单

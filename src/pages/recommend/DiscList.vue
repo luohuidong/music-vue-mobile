@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
-import Loading from '@components/Loading/';
+import { mapState, mapActions } from "vuex";
+import Loading from "@components/Loading/";
 
 export default {
   components: {
@@ -36,7 +36,7 @@ export default {
       }
       return loading;
     },
-    ...mapState('recommend', {
+    ...mapState("recommend", {
       recommendedPlayList: state => state.recommendedPlayList
     })
   },
@@ -44,8 +44,8 @@ export default {
     this.handleGetRecommendPlayList();
   },
   methods: {
-    ...mapActions('recommend', [
-      'handleGetRecommendPlayList'
+    ...mapActions("recommend", [
+      "handleGetRecommendPlayList"
     ])
   }
 };

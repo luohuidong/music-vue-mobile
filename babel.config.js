@@ -1,11 +1,11 @@
 module.exports = {
   presets: [
-    '@vue/app',
+    "@vue/app",
   ],
-  'plugins': [
-    ['import', {
-      'libraryName': 'mand-mobile',
-      'libraryDirectory': 'lib'
+  "plugins": [
+    ["import", {
+      "libraryName": "mand-mobile",
+      "libraryDirectory": "lib"
     }]
   ]
 };

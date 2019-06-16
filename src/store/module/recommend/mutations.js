@@ -1,4 +1,4 @@
-import { PLAY_LIST_REQUEST, BANNER_REQUEST } from './mutationTypes';
+import { PLAY_LIST_REQUEST, BANNER_REQUEST } from "./mutationTypes";
 
 export default {
   [PLAY_LIST_REQUEST](state, payload) {

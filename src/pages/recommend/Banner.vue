@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
-import { Swiper, SwiperItem } from 'mand-mobile';
+import { mapState, mapActions } from "vuex";
+import { Swiper, SwiperItem } from "mand-mobile";
 
 export default {
   components: {
@@ -22,7 +22,7 @@ export default {
     };
   },
   computed: {
-    ...mapState('recommend', {
+    ...mapState("recommend", {
       banner: state => state.banner
     })
   },
@@ -30,8 +30,8 @@ export default {
     this.handleGetBanner();
   },
   methods: {
-    ...mapActions('recommend', [
-      'handleGetBanner'
+    ...mapActions("recommend", [
+      "handleGetBanner"
     ])
   }
 };

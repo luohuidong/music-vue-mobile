@@ -1,4 +1,4 @@
-import * as types from './mutationTypes';
+import * as types from "./mutationTypes";
 
 export default {
   [types.SET_PLAY_LIST](state, payload) {

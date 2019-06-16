@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { ScrollView } from 'mand-mobile';
+import { ScrollView } from "mand-mobile";
 
 export default {
   components: {
@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     selectItem(item) {
-      this.$emit('select', item);
+      this.$emit("select", item);
     }
   }
 };
