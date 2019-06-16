@@ -21,7 +21,7 @@ export async function getSongsDetail(songIds) {
     let songsUrlData = result[1].data.data;
 
     songs = songs.map(song => {
-      const result = songsUrlData.find(urlData => urlData.id = song.id);
+      const result = songsUrlData.find(urlData => urlData.id === song.id);
       song.url = result.url;
       song.img = song.al.picUrl;
       return new SongDetail(song);
