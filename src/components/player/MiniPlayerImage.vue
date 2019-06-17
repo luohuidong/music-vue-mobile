@@ -1,14 +1,18 @@
 <template>
   <div class="icon">
-    <img width="40" height="40" :src="currentSong.img">
+    <img width="40" height="40" :src="currentSong.img" :class="cdClass">
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 export default {
   computed: {
-    ...mapGetters("player", ["currentSong"])
+    ...mapState("player", ["playingState"]),
+    ...mapGetters("player", ["currentSong"]),
+    cdClass() {
+      return this.playingState ? "play" : "play pause";
+    }
   },
   methods: {
     
@@ -33,6 +37,15 @@ export default {
     &.pause {
       animation-play-state: paused;
     }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0)
+  }
+  100% {
+    transform: rotate(360deg)
   }
 }
 </style>

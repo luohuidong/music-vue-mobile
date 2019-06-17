@@ -1,9 +1,9 @@
 // 全屏播放器中部
 <template>
-  <div class="middle">
+  <div class="container">
     <div class="middle-l">
       <div class="cd-wrapper">
-        <div class="cd">
+        <div class="cd" :class="cdClass">
           <img alt class="image" :src="currentSong.img">
         </div>
       </div>
@@ -12,10 +12,14 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 export default {
   computed: {
-    ...mapGetters("player", ["currentSong"])
+    ...mapState("player", ["playingState"]),
+    ...mapGetters("player", ["currentSong"]),
+    cdClass() {
+      return this.playingState ? "play" : "play pause";
+    }
   }
 };
 </script>
@@ -24,7 +28,7 @@ export default {
 @import '~@assets/stylus/variable';
 @import '~@assets/stylus/mixin';
 
-.middle {
+.container {
   position: fixed;
   width: 100%;
   top: 80px;
@@ -64,8 +68,12 @@ export default {
           border: 10px solid rgba(255, 255, 255, 0.1);
         }
 
-        .play {
+        &.play {
           animation: rotate 20s linear infinite;
+        }
+
+        &.pause {
+          animation-play-state: paused;
         }
       }
     }
@@ -115,6 +123,15 @@ export default {
         font-size: $font-size-medium;
       }
     }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0)
+  }
+  100% {
+    transform: rotate(360deg)
   }
 }
 </style>
