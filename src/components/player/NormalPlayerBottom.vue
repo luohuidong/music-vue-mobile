@@ -7,7 +7,7 @@
       </div>
 
       <div class="icon i-left">
-        <i class="icon-prev"></i>
+        <i class="icon-prev" @click="playSibilingSong('previous')"></i>
       </div>
 
       <div class="icon i-center">
@@ -15,7 +15,7 @@
       </div>
 
       <div class="icon i-right">
-        <i class="icon-next"></i>
+        <i class="icon-next" @click="playSibilingSong('next')"></i>
       </div>
 
       <div class="icon i-right">
@@ -39,7 +39,8 @@ export default {
   },
   methods: {
     ...mapActions("player", [
-      "setPlayingState"
+      "setPlayingState",
+      "playSibilingSong"
     ]),
     togglePlay() {
       this.setPlayingState(!this.playingState);

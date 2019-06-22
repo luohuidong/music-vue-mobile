@@ -42,8 +42,7 @@ export default {
   },
   computed: {
     songIds() { // 歌手歌曲 ids
-      let songIds = this.songs.map(element => element.id);
-      return songIds.join(",");
+      return this.songs.map(element => element.id);
     }
   },
   methods: {

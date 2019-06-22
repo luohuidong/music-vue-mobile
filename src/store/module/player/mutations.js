@@ -14,5 +14,9 @@ export default {
   },
   [types.SET_PLAYING_STATE](state, playload) {
     state.playingState = playload.playingState;
+  },
+  [types.SET_CURRENT_SONG_ID](state, playload) {
+    state.currentSongId = playload.currentSongId;
+    state.playingState = playload.playingState;
   }
 };

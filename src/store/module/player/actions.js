@@ -5,7 +5,7 @@ import { getSongsDetail } from "@api/song";
  * 设置当前播放器的播放列表
  */
 async function setPlayList({ commit }, payload) {
-  const songDetails = await getSongsDetail(payload.playListIds);
+  const songDetails = await getSongsDetail(payload.playListIds.join(","));
 
   commit(types.SET_PLAY_LIST, {
     currentSongId: payload.currentSongId, // 当前选中的歌曲
@@ -37,8 +37,21 @@ function setPlayingState({ commit }, playingState) {
   });
 }
 
+/**
+ * 切换到前一首歌或下一首歌
+ * @param {string} type 'previous' or 'next'
+ */
+function playSibilingSong({ commit, getters }, type) {
+  const newCurrentSongId = getters.getSibilingSongId(type);
+  commit(types.SET_CURRENT_SONG_ID, {
+    currentSongId: newCurrentSongId,
+    playingState: true,
+  });
+}
+
 export default {
   setPlayList,
   setFullScreen,
-  setPlayingState
+  setPlayingState,
+  playSibilingSong,
 };
