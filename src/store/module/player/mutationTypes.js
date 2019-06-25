@@ -2,3 +2,5 @@ export const SET_PLAY_LIST = "SET_PLAY_LIST";
 export const SET_FULL_SCREEN = "SET_FULL_SCREEN";
 export const SET_PLAYING_STATE = "SET_PLAYING_STATE";
 export const SET_CURRENT_SONG_ID = "SET_CURRENT_SONG_ID";
+export const SAVE_CURRENT_TIME = "SAVE_CURRENT_SONG_TIME"; // 保存当前播放歌曲节点所对应的时间
+export const SAVE_TOTAL_TIME = "SAVE_TOTAL_TIME";

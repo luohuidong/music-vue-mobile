@@ -49,9 +49,27 @@ function playSibilingSong({ commit, getters }, type) {
   });
 }
 
+/**
+ * 保存当前歌曲播放节点所对应的时间
+ * @param {string} currentTime 
+ */
+function saveCurrentTime({ commit }, currentTime) {
+  commit(types.SAVE_CURRENT_TIME, { currentTime });
+}
+
+/**
+ * 保存当前歌曲播放时间总长度
+ * @param {string} totalTime 
+ */
+function saveTotalTime({ commit }, totalTime) {
+  commit(types.SAVE_TOTAL_TIME, { totalTime });
+}
+
 export default {
   setPlayList,
   setFullScreen,
   setPlayingState,
   playSibilingSong,
+  saveCurrentTime,
+  saveTotalTime
 };

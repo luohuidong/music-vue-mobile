@@ -3,45 +3,26 @@
   <div class="player" v-show="playListDatas.length>0">
     <NormalPlayer/>
     <MiniPlayer/>
-    <audio :src="currentSong.url" ref="audio"></audio>
+    <Audio />
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+import { mapState } from "vuex";
 import NormalPlayer from "./NormalPlayer.vue";
 import MiniPlayer from "./MiniPlayer.vue";
+import Audio from "./Audio.vue";
 
 export default {
   components: {
     NormalPlayer,
-    MiniPlayer
+    MiniPlayer,
+    Audio
   },
   computed: {
-    ...mapState("player", [
-      "currentSongId",
-      "playListIds",
-      "sequenceListIds",
-      "playListDatas",
-      "fullScreen",
-      "mode",
-      "playingState"
-    ]),
-    ...mapGetters("player", ["currentSong"])
+    ...mapState("player", ["playListDatas"]),
   },
-  watch: {
-    currentSong() {
-      this.$nextTick(() => {
-        this.$refs.audio.play();
-      });
-    },
-    playingState(newValue) {
-      const audio = this.$refs.audio;
-      this.$nextTick(() => {
-        newValue ? audio.play() : audio.pause();
-      });
-    }
-  }
+
 };
 </script>
 

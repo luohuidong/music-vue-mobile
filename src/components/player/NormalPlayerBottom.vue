@@ -1,6 +1,8 @@
 // 全屏播放器底部
 <template>
   <div class="bottom">
+    <NormalPlayerBottomProgress/>
+
     <div class="operators">
       <div class="icon i-left">
         <i class="icon-sequence"></i>
@@ -28,20 +30,20 @@
 <script>
 import { mapState, mapActions } from "vuex";
 
+import NormalPlayerBottomProgress from "./NormalPlayerBottomProgress";
+
 export default {
+  components: {
+    NormalPlayerBottomProgress
+  },
   computed: {
-    ...mapState("player", [
-      "playingState"
-    ]),
+    ...mapState("player", ["playingState"]),
     playIconClass() {
       return this.playingState ? "icon-pause" : "icon-play";
-    },
+    }
   },
   methods: {
-    ...mapActions("player", [
-      "setPlayingState",
-      "playSibilingSong"
-    ]),
+    ...mapActions("player", ["setPlayingState", "playSibilingSong"]),
     togglePlay() {
       this.setPlayingState(!this.playingState);
     }
@@ -73,34 +75,6 @@ export default {
         border-radius: 5px;
         background: $color-text-ll;
       }
-    }
-  }
-
-  .progress-wrapper {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    margin: 0px auto;
-    padding: 10px 0;
-
-    .time {
-      color: $color-text;
-      font-size: $font-size-small;
-      flex: 0 0 30px;
-      line-height: 30px;
-      width: 30px;
-
-      &.time-l {
-        text-align: left;
-      }
-
-      &.time-r {
-        text-align: right;
-      }
-    }
-
-    .progress-bar-wrapper {
-      flex: 1;
     }
   }
 

@@ -18,5 +18,11 @@ export default {
   [types.SET_CURRENT_SONG_ID](state, playload) {
     state.currentSongId = playload.currentSongId;
     state.playingState = playload.playingState;
+  },
+  [types.SAVE_CURRENT_TIME](state, playload) {
+    state.currentTime = playload.currentTime;
+  },
+  [types.SAVE_TOTAL_TIME](state, playload) {
+    state.totalTime = playload.totalTime;
   }
 };
