@@ -10,5 +10,5 @@ export default {
   mode: playMode.sequence, // 播放模式
   currentSongId: 0, // 当前播放歌曲的 id
   currentTime: "0:00", // 当前歌曲播放节点对应的时间
-  totalTime: "0:00", // 当前歌曲总时间
+  duration: "0:00", // 当前歌曲总时长
 };

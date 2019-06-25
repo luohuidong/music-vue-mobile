@@ -23,6 +23,6 @@ export default {
     state.currentTime = playload.currentTime;
   },
   [types.SAVE_TOTAL_TIME](state, playload) {
-    state.totalTime = playload.totalTime;
+    state.duration = playload.duration;
   }
 };

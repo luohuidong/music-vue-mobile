@@ -1,14 +1,17 @@
 <template>
   <div class="progress-wrapper">
-    <span class="time time-l"></span>
+    <span class="time time-l">{{ currentTime }}</span>
     <div class="progress-bar-wrapper"></div>
-    <span class="time time-r"></span>
+    <span class="time time-r">{{ duration }}</span>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
-
+  computed: {
+    ...mapState("player", ["currentTime", "duration"])
+  }
 };
 </script>
 

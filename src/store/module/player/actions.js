@@ -58,11 +58,11 @@ function saveCurrentTime({ commit }, currentTime) {
 }
 
 /**
- * 保存当前歌曲播放时间总长度
- * @param {string} totalTime 
+ * 保存当前歌曲总时长
+ * @param {string} duration 
  */
-function saveTotalTime({ commit }, totalTime) {
-  commit(types.SAVE_TOTAL_TIME, { totalTime });
+function saveDuration({ commit }, duration) {
+  commit(types.SAVE_TOTAL_TIME, { duration });
 }
 
 export default {
@@ -71,5 +71,5 @@ export default {
   setPlayingState,
   playSibilingSong,
   saveCurrentTime,
-  saveTotalTime
+  saveDuration
 };

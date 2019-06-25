@@ -29,7 +29,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions("player", ["saveCurrentTime", "saveTotalTime"]),
+    ...mapActions("player", ["saveCurrentTime", "saveDuration"]),
     formatTime(time = 0) {
       const minute = Math.floor(time / 60);
       let second = Math.floor(time % 60);
@@ -41,11 +41,11 @@ export default {
     },
     timeUpdate({ target }) {
       const { currentTime } = target;
-      this.saveCurrentTime(currentTime);
+      this.saveCurrentTime(this.formatTime(currentTime));
     },
     durationChange({ target }) {
       const { duration } = target;
-      this.saveTotalTime(duration);
+      this.saveDuration(this.formatTime(duration));
     }
   }
 };
