@@ -1,14 +1,24 @@
+// 播放器进度条
 <template>
   <div class="progress-wrapper">
     <span class="time time-l">{{ currentTime }}</span>
-    <div class="progress-bar-wrapper"></div>
+
+    <div class="progress-bar-wrapper">
+      <NormalPlayerBottomProgress/>
+    </div>
+
     <span class="time time-r">{{ duration }}</span>
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
+import NormalPlayerBottomProgress from "./NormalPlayerBottomProgressBar";
+
 export default {
+  components: {
+    NormalPlayerBottomProgress
+  },
   computed: {
     ...mapState("player", ["currentTime", "duration"])
   }
@@ -16,8 +26,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '~@assets/styles/variable';
-@import '~@assets/styles/mixin';
+@import "~@assets/styles/variable";
+@import "~@assets/styles/mixin";
 
 .progress-wrapper {
   display: flex;
