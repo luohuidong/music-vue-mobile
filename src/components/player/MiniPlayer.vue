@@ -4,8 +4,8 @@
     <div class="mini-player" v-if="!fullScreen" @click="setFullScreen(true)">
       <MiniPlayerImage/>
       <MiniPlayerText/>
-      <MiniPlayerPlay/>
-      <MiniPlayerPlayList/>
+      <MiniPlayerPlayButton/>
+      <MiniPlayerPlayListButton/>
     </div>
   </transition>
 </template>
@@ -14,15 +14,15 @@
 import { mapState, mapActions } from "vuex";
 import MiniPlayerImage from "./MiniPlayerImage";
 import MiniPlayerText from "./MiniPlayerText";
-import MiniPlayerPlay from "./MiniPlayerPlay";
-import MiniPlayerPlayList from "./MiniPlayerPlayList";
+import MiniPlayerPlayButton from "./MiniPlayerPlayButton";
+import MiniPlayerPlayListButton from "./MiniPlayerPlayListButton";
 
 export default {
   components: {
     MiniPlayerImage,
     MiniPlayerText,
-    MiniPlayerPlay,
-    MiniPlayerPlayList
+    MiniPlayerPlayButton,
+    MiniPlayerPlayListButton
   },
   computed: {
     ...mapState("player", ["fullScreen"])

@@ -1,3 +1,4 @@
+// 迷你播放器播放按钮
 <template>
   <div class="control">
     <i :class="playIconClass" @click.stop="togglePlay"></i>

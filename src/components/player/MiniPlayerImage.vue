@@ -1,3 +1,4 @@
+// 迷你播放器歌曲图片
 <template>
   <div class="icon">
     <img width="40" height="40" :src="currentSong.img" :class="cdClass">

@@ -1,3 +1,4 @@
+// 迷你播放器歌曲列表按钮
 <template>
   <div class="control">
     <i class="icon-playlist"></i>

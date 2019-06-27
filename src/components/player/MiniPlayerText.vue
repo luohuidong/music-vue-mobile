@@ -1,3 +1,4 @@
+// 迷你播放器中显示的文字
 <template>
   <div class="text">
     <h2 class="name" v-html="currentSong.name"></h2>
