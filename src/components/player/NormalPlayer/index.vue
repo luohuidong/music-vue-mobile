@@ -2,10 +2,10 @@
 <template>
   <transition name="normal">
     <div class="normal-player" v-if="fullScreen">
-      <NormalPlayerBackground/>
-      <NormalPlayerTop/>
-      <NormalPlayerMiddle/>
-      <NormalPlayerBottom/>
+      <Background/>
+      <Top/>
+      <Middle/>
+      <Bottom/>
     </div>
   </transition>
 </template>
@@ -13,17 +13,17 @@
 <script>
 import { mapState } from "vuex";
 
-import NormalPlayerBackground from "./NormalPlayerBackground.vue";
-import NormalPlayerTop from "./NormalPlayerTop.vue";
-import NormalPlayerMiddle from "./NormalPlayerMiddle.vue";
-import NormalPlayerBottom from "./NormalPlayerBottom.vue";
+import Background from "./Background.vue";
+import Top from "./Top.vue";
+import Middle from "./Middle.vue";
+import Bottom from "./Bottom.vue";
 
 export default {
   components: {
-    NormalPlayerBackground,
-    NormalPlayerTop,
-    NormalPlayerMiddle,
-    NormalPlayerBottom
+    Background,
+    Top,
+    Middle,
+    Bottom,
   },
   computed: {
     ...mapState("player", ["fullScreen"])

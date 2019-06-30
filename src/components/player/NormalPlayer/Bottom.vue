@@ -30,7 +30,7 @@
 <script>
 import { mapState, mapActions } from "vuex";
 
-import NormalPlayerBottomProgress from "./NormalPlayerBottomProgress";
+import NormalPlayerBottomProgress from "./BottomProgress";
 
 export default {
   components: {

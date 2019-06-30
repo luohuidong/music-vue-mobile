@@ -9,9 +9,9 @@
 
 <script>
 import { mapState } from "vuex";
-import NormalPlayer from "./NormalPlayer.vue";
-import MiniPlayer from "./MiniPlayer.vue";
-import Audio from "./Audio.vue";
+import NormalPlayer from "./NormalPlayer";
+import MiniPlayer from "./MiniPlayer";
+import Audio from "./Audio";
 
 export default {
   components: {

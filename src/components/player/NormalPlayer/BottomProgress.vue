@@ -13,7 +13,7 @@
 
 <script>
 import { mapState } from "vuex";
-import NormalPlayerBottomProgress from "./NormalPlayerBottomProgressBar";
+import NormalPlayerBottomProgress from "./BottomProgressBar";
 
 export default {
   components: {
