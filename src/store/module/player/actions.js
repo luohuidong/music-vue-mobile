@@ -51,7 +51,7 @@ function playSibilingSong({ commit, getters }, type) {
 
 /**
  * 保存当前歌曲播放节点所对应的时间
- * @param {string} currentTime 
+ * @param {string} currentTime
  */
 function saveCurrentTime({ commit }, currentTime) {
   commit(types.SAVE_CURRENT_TIME, { currentTime });
@@ -59,10 +59,18 @@ function saveCurrentTime({ commit }, currentTime) {
 
 /**
  * 保存当前歌曲总时长
- * @param {string} duration 
+ * @param {string} duration
  */
 function saveDuration({ commit }, duration) {
   commit(types.SAVE_TOTAL_TIME, { duration });
+}
+
+function saveProgressBarOffset({ commit }, offset) {
+  commit(types.SAVE_PROGRESS_BAR_OFFSET, { offset });
+}
+
+function saveProgressBarMaxWidth({ commit }, progressBarMaxWidth) {
+  commit(types.SAVE_PROGRESS_BAR_MAX_WIDTH, { progressBarMaxWidth });
 }
 
 export default {
@@ -71,5 +79,7 @@ export default {
   setPlayingState,
   playSibilingSong,
   saveCurrentTime,
-  saveDuration
+  saveDuration,
+  saveProgressBarOffset,
+  saveProgressBarMaxWidth,
 };
