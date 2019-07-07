@@ -11,6 +11,4 @@ export default {
   currentSongId: 0, // 当前播放歌曲的 id
   currentTime: "0:00", // 当前歌曲播放节点对应的时间
   duration: "0:00", // 当前歌曲总时长
-  progressBarOffset: 0, // 进度条偏移量
-  progressBarMaxWidth: 0, // 进度条最大长度
 };

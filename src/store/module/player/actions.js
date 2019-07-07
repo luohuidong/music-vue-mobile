@@ -65,14 +65,6 @@ function saveDuration({ commit }, duration) {
   commit(types.SAVE_TOTAL_TIME, { duration });
 }
 
-function saveProgressBarOffset({ commit }, offset) {
-  commit(types.SAVE_PROGRESS_BAR_OFFSET, { offset });
-}
-
-function saveProgressBarMaxWidth({ commit }, progressBarMaxWidth) {
-  commit(types.SAVE_PROGRESS_BAR_MAX_WIDTH, { progressBarMaxWidth });
-}
-
 export default {
   setPlayList,
   setFullScreen,
@@ -80,6 +72,4 @@ export default {
   playSibilingSong,
   saveCurrentTime,
   saveDuration,
-  saveProgressBarOffset,
-  saveProgressBarMaxWidth,
 };

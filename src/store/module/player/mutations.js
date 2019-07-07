@@ -25,10 +25,4 @@ export default {
   [types.SAVE_TOTAL_TIME](state, playload) {
     state.duration = playload.duration;
   },
-  [types.SAVE_PROGRESS_BAR_OFFSET](state, playload) {
-    state.progressBarOffset = playload.offset;
-  },
-  [types.SAVE_PROGRESS_BAR_MAX_WIDTH](state, playload) {
-    state.progressBarMaxWidth = playload.progressBarMaxWidth;
-  }
 };
